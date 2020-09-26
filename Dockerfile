@@ -9,9 +9,9 @@ RUN apt-get update \
     && pip install --upgrade pip
 
 # 作業するディレクトリを変更
-WORKDIR /home/interpret_ml
+WORKDIR /home/ML_experiment
 COPY requirements.txt ${PWD}
 RUN pip install -r requirements.txt
 # 作業するディレクトリを変更
 # コンテナの内部には入った際のディレクトリの位置を変更している
-WORKDIR /home/interpret_ml/src
+WORKDIR /home/ML_experiment/src
