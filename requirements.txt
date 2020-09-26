@@ -8,5 +8,4 @@ scipy
 tensorflow
 pymc3
 tqdm
-shap
 streamlit
