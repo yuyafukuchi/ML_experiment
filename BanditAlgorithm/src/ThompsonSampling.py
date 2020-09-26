@@ -1,5 +1,5 @@
 import numpy as np
-from np.random import beta
+from numpy.random import beta
 from Arm import Arm
 
 def thompson_sampling(arms, T):
