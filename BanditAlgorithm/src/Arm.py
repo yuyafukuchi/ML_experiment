@@ -13,4 +13,3 @@ class Arm:
         else:
             self.fail += 1
         return result
-
