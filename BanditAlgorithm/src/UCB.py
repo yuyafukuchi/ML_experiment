@@ -14,11 +14,14 @@ def __get_score(arm, t):
 def ucb(arms, T):
     __init(arms)
     reward = 0
+    hist = []
     for i in range(1, T+1):
         scores = [__get_score(arm, i) for arm in arms]
         max_score_index = np.argmax(scores)
-        reward += arms[max_score_index].play()
-    return reward
+        tmp = arms[max_score_index].play()
+        reward += tmp
+        hist.append(tmp)
+    return reward, hist
 
 if __name__ == '__main__':
     arms = [Arm(0.3) for _ in range(5)] + [Arm(0.1) for _ in range(4)] + [Arm(0.5)]
