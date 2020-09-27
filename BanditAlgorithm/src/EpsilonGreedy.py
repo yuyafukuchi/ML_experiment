@@ -8,6 +8,7 @@ def __calc_success_ratio(arm):
 
 def epsilon_greedy(arms, T, epsilon):
     reward = 0
+    hist = []
     for i in range(1, T+1):
         if binomial(n=1, p=epsilon) == 1:
             # 探索ステップ : アームを一様ランダムに選ぶ
@@ -16,8 +17,10 @@ def epsilon_greedy(arms, T, epsilon):
             # 活用ステップ : 今までで一番成功確率の高いアームを選ぶ
             avgs = [ __calc_success_ratio(arm) for arm in arms]
             index = avgs.index(max(avgs))
-        reward += arms[index].play()
-    return reward
+        tmp = arms[index].play()
+        reward += tmp
+        hist.append(tmp)
+    return reward, hist
 
 if __name__ == "__main__":
     arms = [Arm(0.3) for _ in range(5)] + [Arm(0.1) for _ in range(4)] + [Arm(0.5)]
