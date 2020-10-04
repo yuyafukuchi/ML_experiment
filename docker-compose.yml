@@ -11,3 +11,7 @@ services:
     volumes:
       - $PWD:/home/ML_experiment
     tty: true # コンテナを起動させ続ける
+    deploy:
+      resources:
+        limits:
+          memory: 4g
