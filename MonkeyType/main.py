@@ -1,6 +1,4 @@
-def add(a,b):
-    return a+b
-
+from module import add,mul
 
 def main():
     print(add(1,3))
