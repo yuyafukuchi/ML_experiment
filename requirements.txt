@@ -9,3 +9,4 @@ tensorflow
 pymc3
 tqdm
 streamlit
+MonkeyType
