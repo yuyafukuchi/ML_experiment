@@ -3,7 +3,7 @@ def add(a,b):
 
 
 def main():
-    add(1,3)
+    print(add(1,3))
     return
 
 
