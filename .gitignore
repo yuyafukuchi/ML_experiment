@@ -131,3 +131,6 @@ dmypy.json
 # data
 dataset/*.csv
 dataset/
+
+# MonkeyType
+MonkeyType/monkeytype.sqlite3
