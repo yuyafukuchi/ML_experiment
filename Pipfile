@@ -1,0 +1,23 @@
+[packages]
+numpy = "*"
+pandas = "*"
+matplotlib = "*"
+scikit-learn = "*"
+seaborn = "*"
+jupyter = "*"
+tqdm = "*"
+notebook = "*"
+mlflow = "*"
+lightgbm = "*"
+torch = "*"
+torchvision = "*"
+catalyst = "*"
+
+[scripts]
+format = "autopep8 -ivr ."
+lint = "flake8 --show-source ."
+jn = "jupyter notebook --ip=0.0.0.0 --no-browser --allow-root --NotebookApp.token=''"
+
+[dev-packages]
+autopep8 = "*"
+flake8 = "*"
