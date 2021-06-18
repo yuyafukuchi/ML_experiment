@@ -1,6 +1,6 @@
 version: "3"
 services:
-  app:
+  ml_app:
     container_name: "python_ml_experiment"
     build:
       context: .
@@ -8,8 +8,9 @@ services:
     image: python_ml_experiment
     ports:
       - "8000:8000"
+    working_dir: /home/app/
     volumes:
-      - $PWD:/home/ML_experiment
+      - ./:/home/app
     tty: true # コンテナを起動させ続ける
     deploy:
       resources:
